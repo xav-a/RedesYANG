@@ -1,0 +1,28 @@
+module: turing-machine
+  +--rw turing-machine
+     +--ro state                  state-index
+     +--ro head-position          cell-index
+     +--ro tape
+     |  +--ro cell* [coord]
+     |     +--ro coord     cell-index
+     |     +--ro symbol?   tape-symbol
+     +--rw transition-function
+        +--rw delta* [label]
+           +--rw label     string
+           +--rw input
+           |  +--rw state     state-index
+           |  +--rw symbol    tape-symbol
+           +--rw output
+              +--rw state?       state-index
+              +--rw symbol?      tape-symbol
+              +--rw head-move?   head-dir
+
+  rpcs:
+    +---x initialize
+    |  +---w input
+    |     +---w tape-content?   string
+    +---x run
+
+  notifications:
+    +---n halted
+       +--ro state    state-index

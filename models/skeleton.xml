@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <turing-machine xmlns="http://example.net/turing-machine">
+    <transition-function>
+      <delta>
+        <label/>
+        <input>
+          <state/>
+          <symbol/>
+        </input>
+        <output>
+          <state/>
+          <symbol/>
+        </output>
+      </delta>
+    </transition-function>
+  </turing-machine>
+</config>
