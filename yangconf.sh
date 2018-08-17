@@ -40,6 +40,8 @@ yang2dsdl -s -j -b turing-machine -t config -v turing-machine-config.xml
 echo -e "\n*********************\n"
 read -p "Enviando RPC 'initialize'" -n 1 -s
 echo -e "\n"
+cat  initialize-rpc.xml
+echo -e "\n"
 
 yang2dsdl -t rpc -v initialize-rpc.xml turing-machine.yang
 
